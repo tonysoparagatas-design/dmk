@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0c">
+  <title>DMK Motors | Seu próximo carro está aqui</title>
+  <meta name="description" content="Compre, venda ou troque seu veículo com a DMK Motors. Atendimento em Valinhos e região de Campinas.">
+  <meta property="og:title" content="DMK Motors | Compra, venda e troca de veículos">
+  <meta property="og:description" content="Encontre seu próximo carro com a DMK Motors em Valinhos/SP.">
+  <meta property="og:image" content="assets/dmk-logo.png">
+  <link rel="icon" type="image/png" href="assets/dmk-logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "DMK Motors",
+    "image": "assets/dmk-logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Campos Salles, 2276",
+      "addressLocality": "Valinhos",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "telephone": "+55 19 99163-2058",
+    "sameAs": ["https://www.instagram.com/dmkmotors/"]
+  }
+  </script>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/config.js"></script>
+  <script defer src="assets/site.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="DMK Motors - início"><img src="assets/dmk-logo.png" alt="DMK Motors"></a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#estoque">Estoque</a><a href="#sobre">A DMK</a><a href="#negociar">Compre, venda ou troque</a><a href="#contato">Contato</a>
+    </nav>
+    <a class="button button-small button-outline header-contact" data-whatsapp="diogo" href="#contato">Falar com consultor <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content wrap">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> DMK MOTORS · VALINHOS / SP</div>
+        <h1>Seu próximo carro<br><em>está aqui.</em></h1>
+        <p>Boas escolhas começam com confiança. Compre, venda ou troque seu veículo com atendimento próximo e personalizado.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#estoque">Explorar veículos <span>↗</span></a>
+          <a class="button button-glass" data-whatsapp="diogo" href="#contato">Falar com um consultor</a>
+        </div>
+        <div class="hero-bottom"><span>COMPRA&nbsp; · &nbsp;VENDA&nbsp; · &nbsp;TROCA</span><a href="#estoque">DESCUBRA O ESTOQUE <span>↓</span></a></div>
+      </div>
+      <div class="hero-counter">01 <i></i> 03</div>
+    </section>
+
+    <section class="intro wrap" id="sobre">
+      <div class="section-kicker"><span class="eyebrow">UMA NOVA FORMA DE NEGOCIAR</span><i></i></div>
+      <div><h2>Mais que encontrar um carro.<br><em>É fazer um bom negócio.</em></h2><p>Na DMK Motors, ajudamos você a encontrar o veículo ideal. Conte com nossa equipe para conversar sobre compra, venda ou troca de veículos.</p></div>
+    </section>
+
+    <section class="inventory wrap" id="estoque">
+      <div class="section-head">
+        <div><div class="eyebrow">NOSSO ESTOQUE</div><h2>Encontre o seu <em>próximo carro.</em></h2></div>
+        <a class="text-link" href="#estoque">ESTOQUE DISPONÍVEL <span>↗</span></a>
+      </div>
+      <div class="catalog-tools">
+        <label class="search-box"><span>⌕</span><input id="vehicleSearch" type="search" placeholder="Buscar por marca ou modelo" aria-label="Buscar veículos"></label>
+        <select id="sortVehicles" aria-label="Ordenar veículos"><option value="recent">Mais recentes</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option><option value="year">Ano mais recente</option><option value="mileage">Menor quilometragem</option></select>
+      </div>
+      <div class="vehicle-grid" id="vehicleGrid"><div class="loading-state">Carregando veículos disponíveis...</div></div>
+      <p class="stock-disclaimer">Disponibilidade, valores e condições devem ser confirmados com a equipe comercial.</p>
+    </section>
+
+    <section class="service-section" id="negociar">
+      <div class="wrap">
+        <div class="center-heading"><div class="eyebrow">NEGOCIE COM A DMK</div><h2>O caminho para o seu próximo carro<br><em>começa por aqui.</em></h2></div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon">01</div><div class="eyebrow">COMPRE</div><h3>Encontre seu próximo carro</h3><p>Converse com nossa equipe e encontre uma opção alinhada ao que você procura.</p><a data-whatsapp="diogo" data-message="Olá! Tenho interesse em comprar um veículo na DMK Motors." href="#contato">Quero comprar <span>↗</span></a></article>
+          <article class="service-card"><div class="service-icon">02</div><div class="eyebrow">TROQUE</div><h3>Faça uma troca</h3><p>Está pensando em trocar de veículo? Fale com a equipe sobre as possibilidades.</p><a data-whatsapp="igor" data-message="Olá! Tenho interesse em trocar meu veículo na DMK Motors." href="#contato">Quero trocar <span>↗</span></a></article>
+          <article class="service-card"><div class="service-icon">03</div><div class="eyebrow">VENDA</div><h3>Venda seu veículo</h3><p>Apresente seu veículo para conversar sobre uma possível negociação.</p><a data-whatsapp="igor" data-message="Olá! Gostaria de vender meu veículo com a DMK Motors." href="#contato">Quero vender <span>↗</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="trade-section">
+      <div class="wrap trade-layout">
+        <div class="trade-copy"><div class="eyebrow">AVALIE SEU USADO</div><h2>Seu carro pode ser<br><em>o começo de um novo.</em></h2><p>Preencha os dados básicos do seu veículo. Você será direcionado ao WhatsApp para conversar com nossa equipe.</p></div>
+        <form id="tradeForm" class="trade-form">
+          <h3>Quero avaliar meu veículo</h3>
+          <div class="form-grid"><label>Seu nome<input name="name" required placeholder="Nome completo"></label><label>WhatsApp<input name="phone" required placeholder="(19) 99999-9999"></label><label>Marca e modelo<input name="vehicle" required placeholder="Ex.: Honda Civic"></label><label>Ano<input name="year" required placeholder="Ex.: 2021"></label><label class="form-wide">Quilometragem<input name="mileage" placeholder="Ex.: 45.000 km"></label></div>
+          <button class="button button-gold button-full" type="submit">Enviar para avaliação <span>↗</span></button>
+          <small>O envio abre uma conversa no WhatsApp. A avaliação depende da análise da equipe.</small>
+        </form>
+      </div>
+    </section>
+
+    <section class="faq-section wrap">
+      <div><div class="eyebrow">DÚVIDAS FREQUENTES</div><h2>Vamos deixar tudo<br><em>mais claro.</em></h2></div>
+      <div class="faq-list">
+        <details><summary>Posso comprar, vender ou trocar meu veículo?</summary><p>Sim. A DMK Motors trabalha com compra, venda e troca. Entre em contato para conversar sobre sua necessidade.</p></details>
+        <details><summary>Como consulto a disponibilidade de um veículo?</summary><p>Entre em contato pelo WhatsApp. Nossa equipe confirma a disponibilidade e fornece as informações atualizadas.</p></details>
+        <details><summary>Onde fica a DMK Motors?</summary><p>Rua Campos Salles, 2276, Vila Faustina II, Valinhos/SP.</p></details>
+        <details><summary>Posso agendar uma visita?</summary><p>Sim. Fale com Diogo ou Igor pelo WhatsApp para combinar os detalhes da visita.</p></details>
+      </div>
+    </section>
+
+    <section class="contact-band" id="contato"><div class="wrap contact-layout"><div><div class="eyebrow">VAMOS CONVERSAR?</div><h2>Seu próximo negócio<br><em>pode começar agora.</em></h2></div><div><p>Fale com nossa equipe e tire suas dúvidas sobre compra, venda ou troca.</p><div class="contact-actions"><a class="button button-gold" data-whatsapp="diogo" href="#contato">WhatsApp Diogo <span>↗</span></a><a class="button button-outline" data-whatsapp="igor" href="#contato">WhatsApp Igor <span>↗</span></a></div></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-main"><div><a class="brand footer-brand" href="index.html"><img src="assets/dmk-logo.png" alt="DMK Motors"></a><p>Compra, venda e troca de veículos.</p></div><div><div class="eyebrow">VISITE NOSSA LOJA</div><p>Rua Campos Salles, 2276<br>Vila Faustina II · Valinhos/SP</p><a class="footer-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Rua+Campos+Salles+2276+Valinhos+SP">Como chegar ↗</a></div><div><div class="eyebrow">FALE COM A EQUIPE</div><a class="footer-link" data-whatsapp="diogo" href="#contato">WhatsApp Diogo ↗</a><a class="footer-link" data-whatsapp="igor" href="#contato">WhatsApp Igor ↗</a><a class="footer-link" target="_blank" rel="noopener" href="https://www.instagram.com/dmkmotors/">Instagram DMK ↗</a></div></div><div class="wrap footer-bottom"><span>© <span id="yearNow"></span> DMK Motors. Todos os direitos reservados.</span><a href="admin/">Acesso da equipe</a><span>Valinhos · São Paulo</span></div></footer>
+  <a class="whatsapp-float" data-whatsapp="diogo" href="#contato" aria-label="Falar com a DMK Motors pelo WhatsApp">◔ <span>Fale conosco</span></a>
+</body>
+</html>
